@@ -31,7 +31,7 @@ app.use("/todos", TodosController())
 app.use("/usuarios", UsuariosController())
 app.use("/categorias", CategoriasController())
 
-console.log("🚀 Inicio de la aplicación");
+console.log(`🚀 El puerto es: ${PORT}`);
 
 app.listen(PORT, () => {
     console.log(`Se inicio servidor en puerto ${PORT}`)
