@@ -19,7 +19,7 @@ app.use(cors()) // Configurando cors
 
 app.use(express.static("assets"))
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4000
 
 
 app.get("/", (req : Request, resp : Response) => {
@@ -31,7 +31,7 @@ app.use("/todos", TodosController())
 app.use("/usuarios", UsuariosController())
 app.use("/categorias", CategoriasController())
 
-
+console.log("🚀 Inicio de la aplicación");
 
 app.listen(PORT, () => {
     console.log(`Se inicio servidor en puerto ${PORT}`)
